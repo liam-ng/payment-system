@@ -15,6 +15,10 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "dotenv": "^16.3.1",
+<<<<<<< HEAD
+=======
+    "ejs": "^3.1.9",
+>>>>>>> 1d901efe4c6bbf98b045c204341af68a11eb04c2
     "express": "^4.18.2",
     "stripe": "^8.191.0",
     "node-fetch": "^2.7.0"
