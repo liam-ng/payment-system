@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Payment</title>
+    <title>Demo for AimStar</title>
 
     <link rel="stylesheet" href="/css/base.css" />
     <script async src="/pricing-table.js"></script>
   </head>
   <body>
     <main>
-      <h1>Payment</h1>
+      <h1>Demo Payment for</h1> <img src="AimStar.png" style="width:full;height:45px;">
 
       <p>Use this link view/ update/ cancel your plan <a
         href="https://billing.stripe.com/p/login/test_7sIcPMfPH5DDgo03cc" target="_blank">in customer portal</a>.</p>
@@ -19,8 +19,11 @@
         <stripe-pricing-table pricing-table-id="prctbl_1NwUvFIscxcBshcEy9Zhp1J8"
         publishable-key="pk_test_51NwTcfIscxcBshcEdoLqWM1tx1sdmHPTZlMycJnjbV775o7wSjRawyNXwUwdZ9rlOyMhbnIQPgrR7mIdf7ulR5E500FPBqZfLX">
         </stripe-pricing-table>
-
-      <div id="messages" role="alert" style="display: none;"></div>
+      <p> Paypal button is WIP
+      <div id="paypal-button-container"></div>
+      <p id="result-message"></p>
+      <script src="https://www.paypal.com/sdk/js?client-id=AauUc1_uSX-SxAnejzrTV744zLvJTadHUN2jz3RHZJ55J2AXll0uWw75H7UQlcSdTn4t-2c6FnuKLPxC&components=buttons&enable-funding=venmo,paylater" data-sdk-integration-source="integrationbuilder_sc"></script>
+      <script src="app.js"></script>
     </main>
   </body>
 </html>
