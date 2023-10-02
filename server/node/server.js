@@ -12,6 +12,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
     url: "https://github.com/stripe-samples"
   }
 });
+const stripe = require('stripe')(STRIPE_SECRET_KEY);
 
 app.use(express.static(process.env.STATIC_DIR));
 app.use(
@@ -35,32 +36,6 @@ app.get('/config', (req, res) => {
   res.send({
     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   });
-});
-
-app.get('/create-payment-intent', async (req, res) => {
-  // Create a PaymentIntent with the amount, currency, and a payment method type.
-  //
-  // See the documentation [0] for the full list of supported parameters.
-  //
-  // [0] https://stripe.com/docs/api/payment_intents/create
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      currency: 'EUR',
-      amount: 1999,
-      automatic_payment_methods: { enabled: true }
-    });
-
-    // Send publishable key and PaymentIntent details to client
-    res.send({
-      clientSecret: paymentIntent.client_secret,
-    });
-  } catch (e) {
-    return res.status(400).send({
-      error: {
-        message: e.message,
-      },
-    });
-  }
 });
 
 // Expose a endpoint as a webhook handler for asynchronous events.
