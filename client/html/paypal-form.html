@@ -5,16 +5,19 @@
     <title>Liam Demo</title>
     <link rel="stylesheet" href="/css/payment.css" />
   </head>
-  <body>
+  <body onload="window.open('/test-account.html', '_blank', 'width=742,height=276');">
     <header class="device-content">
       <section class="left">
-        <a href="/" target="_self">Go back</a>
+        <a href="/" target="_self"><button type="button" name="back">Go back</button></a>
 			</section>
     </header>
     <div class="testbox">
       <form name="paypal-form" method="post" action="/api/subscriptions">
         <hr/>
-        <input type="text" name="planID" type="hidden"/>
+        <input type="hidden" name="planID" readonly/>
+        <div class="btn-block">
+          <button type="button" name="info" onclick="window.open('/test-account.html', '_blank', 'width=742,height=276');">Click me to find PayPal test account</button>
+        </div>
         <div class="item">
           <p>Name</p>
           <input type="text" name="client_given_name" placeholder="First name" value="John"/>
@@ -39,13 +42,13 @@
             </select>
           </div>
         </div>
-        <div class="btn-block Buttons">
+        <div class="btn-block">
           <button type="submit" name="paypal_submit">Send</button>
         </div>
       </form>
     <div>
       <br>
-      <p id="result-message">Test Msg</p>
+      <p id="result-message"></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="paypal-script/pay.js"></script>
