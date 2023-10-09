@@ -14,7 +14,8 @@
     <div class="testbox">
       <form name="paypal-form" method="post" action="/api/subscriptions">
         <hr/>
-        <input type="text" name="planID" type="hidden" readonly/>
+        <input type="hidden" name="planID" readonly/>
+        <button type="button" name="info" onclick="window.open('/test-account.html', '_blank', 'width=742,height=276');">Click me to find PayPal test account</button>
         <div class="item">
           <p>Name</p>
           <input type="text" name="client_given_name" placeholder="First name" value="John"/>
