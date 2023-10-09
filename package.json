@@ -5,13 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "npx prettier --write **/*.{js,md}",
     "format:check": "npx prettier --check **/*.{js,md}",
     "lint": "npx eslint server/*.js --env=node && npx eslint client/*.js --env=browser"
   },
-  "author": "stripe-samples",
-  "license": "ISC",
+  "author": "liam",
   "dependencies": {
     "body-parser": "^1.20.1",
     "dotenv": "^16.3.1",
