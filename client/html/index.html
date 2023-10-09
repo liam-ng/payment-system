@@ -6,8 +6,7 @@
 
     <title>Liam Demo</title>
 
-    <link rel="stylesheet" href="/css/base.css" />
-    <script src="card.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
   </head>
   <body>
     <header class="device-content">
@@ -28,7 +27,7 @@
     </header>
     
     <div class="grid content">
-      <a href="paypal-form.html" target="_self"><div class="card">
+        <div class="card" id="basic" onclick="createProduct()">
         <span class="icon">
           <svg
             class="svg-icon" 
@@ -66,9 +65,9 @@
           <div class="line line-2"></div>
           <div class="line line-3"></div>
         </div>
-      </div></a>
+      </div>
 
-      <div class="card">
+      <div class="card" id="premium">
         <span class="icon">
           <svg
             class="svg-icon" 
@@ -110,11 +109,15 @@
         </div>
       </div>
     </div>
+
+    <div id="result-message">Msg</div>
     
     <label class="day-night">
       <input type="checkbox" checked />
       <div></div>
     </label>
 
+    <script type="text/javascript" src="card.js"></script>
+    <script type="text/javascript" src="paypal-script/app.js"></script>
   </body>
 </html>

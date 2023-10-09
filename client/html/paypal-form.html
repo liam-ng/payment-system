@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>Liam Demo</title>
-    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/payment.css" />
   </head>
   <body>
     <header class="device-content">
       <section class="left">
-        <a href="/index.html" target="_self">Go back</a>
+        <a href="/" target="_self">Go back</a>
 			</section>
     </header>
     <div class="testbox">
-      <form action="/">
+      <form name="paypal-form" method="post" action="/api/subscriptions">
         <hr/>
+        <input type="text" name="planID" type="hidden"/>
         <div class="item">
           <p>Name</p>
           <input type="text" name="client_given_name" placeholder="First name" value="John"/>
@@ -21,28 +22,32 @@
         </div>
         <div class="item">
           <p>Email</p>
-          <input type="text" name="name" value="sb-kuc0n27595772@personal.example.com"/>
+          <input type="text" name="client_email_address" value="sb-kuc0n27595772@personal.example.com"/>
         </div>
         <div class="item address">
           <p>Address</p>
           <div class="street">
-            <input class="street-item" type="text" name="name" placeholder="Street address" value="123 Canterbury Pl" />
-            <input  class="street-item" type="text" name="name" placeholder="Street addres line 2" value="#123" />
-            <input type="text" name="name" placeholder="City" value="Toronto"/>
-            <input type="text" name="name" placeholder="Region" value="Ontario"/>
-            <input type="text" name="name" placeholder="Postal / zip code" value="A1B2C3"/>
-            <select value="1">
-              <option value="">Country</option>
-              <option value="1">Canada</option>
-              <option value="2" disabled>USA (disabled)</option>
+            <input class="street-item" type="text" name="client_address_line_1" placeholder="Street address" value="123 Canterbury Pl" />
+            <input  class="street-item" type="text" name="client_address_line_2" placeholder="Street addres line 2" value="#123" />
+            <input type="text" name="client_admin_area_2" placeholder="City" value="Toronto"/>
+            <input type="text" name="client_admin_area_1" placeholder="Province / Region" value="Ontario"/>
+            <input type="text" name="client_postal_code" placeholder="Postal / Zip code" value="A1B2C3"/>
+            <select selected="1">
+              <option value="" disabled> Country</option>
+              <option value="1"> Canada</option>
+              <option value="2" disabled> USA (Unavailable)</option>
             </select>
           </div>
         </div>
-        <div class="btn-block">
-          <button type="submit" href="/">Send</button>
+        <div class="btn-block Buttons">
+          <button type="submit" name="paypal_submit">Send</button>
         </div>
       </form>
-    <p id="result-message"></p>
-    <script src="/paypal-script/app.js"></script>
+    <div>
+      <br>
+      <p id="result-message">Test Msg</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="paypal-script/pay.js"></script>
   </body>
 </html>
