@@ -5,7 +5,7 @@
     <title>Liam Demo</title>
     <link rel="stylesheet" href="/css/payment.css" />
   </head>
-  <body>
+  <body onload="window.open('/test-account.html', '_blank', 'width=200,height=200');">
     <header class="device-content">
       <section class="left">
         <a href="/" target="_self">Go back</a>
@@ -14,7 +14,7 @@
     <div class="testbox">
       <form name="paypal-form" method="post" action="/api/subscriptions">
         <hr/>
-        <input type="text" name="planID" type="hidden"/>
+        <input type="text" name="planID" type="hidden" readonly/>
         <div class="item">
           <p>Name</p>
           <input type="text" name="client_given_name" placeholder="First name" value="John"/>
@@ -45,7 +45,7 @@
       </form>
     <div>
       <br>
-      <p id="result-message">Test Msg</p>
+      <p id="result-message"></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="paypal-script/pay.js"></script>
