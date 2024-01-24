@@ -11,12 +11,14 @@ https://liam-demo.azurewebsites.net/
 
 ## API Flow
 ![image](https://github.com/liam-ng/payment-system/assets/90180576/86576aee-99b9-42e0-9ff7-012e12f42447)
+
 Reference to PayPal Documentation
 
 Expected Workflow
 ![image](https://github.com/liam-ng/payment-system/assets/90180576/74a5a73d-88f5-49e3-b461-ee883ceeb98b)
 
 List of Variables in API Calls (Postman)
+
 ![image](https://github.com/liam-ng/payment-system/assets/90180576/1b607bfa-dd08-482a-96f8-dd17606d71ed)
 
 
