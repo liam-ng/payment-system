@@ -38,5 +38,6 @@ List of Variables in API Calls (Postman)
 ## Potential Improvement
 - System Design Diagram
 - Input verification/ cleaning
+- Automate unit/ integration test
 - Error/ Exception Handling
 - surprisingly GitHub SAST detected exposed credential but not SemGrep, the GitLab custom ruleset for Semgrep has great potential for comprehensive scanning 
